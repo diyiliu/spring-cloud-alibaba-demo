@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.182.100:8848
+        shared-configs:
+          - data-id: shared-logging.properties
+
+      discovery:
+        server-addr: 192.168.182.100:8848
+
+
+zuul:
+  routes:
+    department:
+      path: /department/**
+      serviceId: department-service
+    employee:
+      path: /employee/**
+      serviceId: employee-service
+    organization:
+      path: /organization/**
+      serviceId: organization-service

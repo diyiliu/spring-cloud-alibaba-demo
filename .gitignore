@@ -1,0 +1,5 @@
+# Project exclude paths
+/cloud-department-service/target/
+/cloud-employee-service/target/
+/cloud-gateway-service/target/
+/cloud-organization-service/target/

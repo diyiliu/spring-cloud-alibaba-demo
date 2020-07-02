@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: organization-service
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.182.100:8848
+        shared-configs:
+          - data-id: shared-logging.properties
+
+      discovery:
+        server-addr: 192.168.182.100:8848
