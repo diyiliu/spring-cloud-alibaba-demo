@@ -1,0 +1,27 @@
+nacos:
+  server-addr: 192.168.2.182:8848
+
+spring:
+  application:
+    name: dubbo-client
+
+  cloud:
+    nacos:
+      config:
+        server-addr: ${nacos.server-addr}
+        shared-configs:
+          - data-id: shared-logging.properties
+
+      discovery:
+        server-addr: ${nacos.server-addr}
+
+
+dubbo:
+  registry:
+    address: spring-cloud://192.168.2.182
+
+  cloud:
+    subscribed-services: dubbo-server
+
+#  consumer:
+#    check: false

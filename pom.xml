@@ -15,6 +15,9 @@
         <module>cloud-department-service</module>
         <module>cloud-gateway-service</module>
         <module>cloud-organization-service</module>
+        <module>cloud-dubbo-server</module>
+        <module>cloud-dubbo-client</module>
+        <module>cloud-dubbo-api</module>
     </modules>
 
     <properties>
